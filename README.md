@@ -1,7 +1,7 @@
-# CSE0210-Soccer-game
+# CSE0210-Taca_taca-game
 This is our final team project of CSE 210 class
 
-# Soccer game
+# Taca-taca(Soccer game)
 
 the objective of this game is to be able to simulate a soccer field in which the player has to score a goal and thus be able to obtain points, the first player to reach 3 or 5 or 10 points wins
 
