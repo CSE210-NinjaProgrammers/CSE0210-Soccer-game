@@ -88,7 +88,7 @@ class SceneManager:
         self._add_score_p1(cast)
         self._add_score_p2(cast)
         self._add_ball(cast)
-        self._add_bricks(cast)
+        self._add_goals(cast)
         self._add_goal_right(cast)
         self._add_team(cast)
         self._add_team_two(cast)
@@ -104,7 +104,7 @@ class SceneManager:
         
     def _prepare_next_level(self, cast, script):
         self._add_ball(cast)
-        self._add_bricks(cast)
+        self._add_goals(cast)
         self._add_goal_right(cast)
         self._add_team(cast)
         self._add_team_two(cast)
@@ -170,7 +170,7 @@ class SceneManager:
         ball = Ball(body, image, True)
         cast.add_actor(BALL_GROUP, ball)
 
-    def _add_bricks(self, cast):
+    def _add_goals(self, cast):
         cast.clear_actors(GOAL_GROUP)
         x = CENTER_X - 666
         y = CENTER_Y - 100     
