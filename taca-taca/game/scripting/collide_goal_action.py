@@ -11,20 +11,20 @@ class CollideGoalAction(Action):
         
     def execute(self, cast, script, callback):
         ball = cast.get_first_actor(BALL_GROUP)
-        bricks = cast.get_actors(GOAL_GROUP)
+        goals = cast.get_actors(GOAL_GROUP)
         stats = cast.get_first_actor(STATS_GROUP)
         
-        for brick in bricks:
+        for goal in goals:
             ball_body = ball.get_body()
-            brick_body = brick.get_body()
+            goal_body = goal.get_body()
 
-            if self._physics_service.has_collided(ball_body, brick_body):
+            if self._physics_service.has_collided(ball_body, goal_body):
                 ball.bounce_y()
                 sound = Sound(GOAL_SOUND)
                 self._audio_service.play_sound(sound)
-                if brick.get_player() == 1:
+                if goal.get_player() == 1:
                     stats.add_point_p1()
                 
-                if brick.get_player() == 2:
+                if goal.get_player() == 2:
                     stats.add_point_p2()
                 callback.on_next(TRY_AGAIN) 

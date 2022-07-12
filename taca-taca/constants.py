@@ -82,9 +82,9 @@ STATS_GROUP = "stats"
 
 # HUD
 HUD_MARGIN = 15
-SCORE_P1_GROUP = "Read Team"
+SCORE_P1_GROUP = "Red Team"
 SCORE_P2_GROUP = "Black Team"
-SCORE_P1_FORMAT = "Read Team: {}"
+SCORE_P1_FORMAT = "Red Team: {}"
 SCORE_P2_FORMAT = "Black Team: {}"
 
 # BALL
@@ -106,7 +106,7 @@ TEAM_TWO_GROUP = "teamtwo"
 TEAM_TWO_IMAGES = [f"taca-taca/assets/images/{n:03}.png" for n in range(103, 106)]
 
 
-# BRICK
+# GOAL
 GOAL_GROUP = "goals"
 GOAL_IMAGES = "taca-taca/assets/images/goalLeft.png"
 GOAL_RIGHT = "taca-taca/assets/images/goalright.png"
@@ -114,13 +114,13 @@ GOAL_WIDTH = 50
 GOAL_HEIGHT = 300
 GOALR_WIDTH = 80
 GOALR_HEIGHT = 300  
-BRICK_DELAY = 0.5
-BRICK_RATE = 4
-BRICK_POINTS = 50
+GOAL_DELAY = 0.5
+GOAL_RATE = 4
+GOAL_POINTS = 50
 
 # DIALOG
 DIALOG_GROUP = "dialogs"
 PREP_TO_LAUNCH = "PREPARING TO PLAY"
 ENTER_TO_START = "PRESS ENTER TO START"
-PLAYER_ONE_WIN = "READ TEAM IS THE WINNER!"
+PLAYER_ONE_WIN = "RED TEAM IS THE WINNER!"
 PLAYER_TWO_WIN = "BLACK TEAM IS THE WINNER!"
