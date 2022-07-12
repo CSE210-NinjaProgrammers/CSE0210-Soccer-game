@@ -22,9 +22,10 @@ FIELD_LEFT = 0
 FIELD_RIGHT = SCREEN_WIDTH
 
 # FONT
-FONT_FILE = "taca-taca/assets/fonts/TitanOne-Regular.ttf"
-FONT_SMALL = 32
-FONT_LARGE = 48
+FONT_FILE = "taca-taca/assets/fonts/Proline.otf"
+FONT_FILE_SCORE = "taca-taca/assets/fonts/WoodenLog.ttf"
+FONT_SMALL = 40
+FONT_LARGE = 50
 
 # SOUND
 KICK_SOUND = "taca-taca/assets/sounds/kick.wav"
@@ -58,9 +59,6 @@ NEXT_LEVEL = 2
 IN_PLAY = 3
 GAME_OVER = 4
 
-# LEVELS
-LEVEL_FILE = "taca-taca/assets/data/level-{:03}.txt"
-BASE_LEVELS = 5
 
 # -------------------------------------------------------------------------------------------------- 
 # SCRIPTING CONSTANTS
@@ -81,17 +79,13 @@ RELEASE = 6
 
 # STATS
 STATS_GROUP = "stats"
-DEFAULT_LIVES = 3
-MAXIMUM_LIVES = 5
 
 # HUD
 HUD_MARGIN = 15
-LEVEL_GROUP = "level"
-LIVES_GROUP = "lives"
-SCORE_P1_GROUP = "PLayer1"
-SCORE_P2_GROUP = "Player2"
-SCORE_P1_FORMAT = "PLAYER 1: {}"
-SCORE_P2_FORMAT = "PLAYER 2: {}"
+SCORE_P1_GROUP = "Read Team"
+SCORE_P2_GROUP = "Black Team"
+SCORE_P1_FORMAT = "Read Team: {}"
+SCORE_P2_FORMAT = "Black Team: {}"
 
 # BALL
 BALL_GROUP = "balls"
@@ -108,11 +102,8 @@ TEAM_HEIGHT = 106
 TEAM_RATE = 6
 TEAM_VELOCITY = 7
 
-
 TEAM_TWO_GROUP = "teamtwo"
 TEAM_TWO_IMAGES = [f"taca-taca/assets/images/{n:03}.png" for n in range(103, 106)]
-
-
 
 
 # BRICK
@@ -129,7 +120,7 @@ BRICK_POINTS = 50
 
 # DIALOG
 DIALOG_GROUP = "dialogs"
-PREP_TO_LAUNCH = "PREPARING TO LAUNCH"
+PREP_TO_LAUNCH = "PREPARING TO PLAY"
 ENTER_TO_START = "PRESS ENTER TO START"
-PLAYER_ONE_WIN = "PLAYER 1 IS THE WINNER!"
-PLAYER_TWO_WIN = "PLAYER 2 IS THE WINNER!"
+PLAYER_ONE_WIN = "READ TEAM IS THE WINNER!"
+PLAYER_TWO_WIN = "BLACK TEAM IS THE WINNER!"
