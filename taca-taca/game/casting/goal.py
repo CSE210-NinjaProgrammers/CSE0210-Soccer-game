@@ -17,14 +17,6 @@ class Goal(Actor):
         self._image = image 
         self._points = 0
         self._player = player
-        
-    # def get_animation(self):
-    #     """Gets the brick's image.
-        
-    #     Returns:
-    #         An instance of Image.
-    #     """
-    #     return self._animation
 
     def get_player(self):
         """Gets the player.

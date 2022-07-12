@@ -89,8 +89,8 @@ class SceneManager:
         self._add_score_p2(cast)
         self._add_ball(cast)
         cast.clear_actors(GOAL_GROUP)
-        self._add_goals(cast,666, 100,GOAL_WIDTH,GOAL_HEIGHT,GOAL_IMAGES)
-        self._add_goals(cast,-625, 100,GOALR_WIDTH,GOALR_HEIGHT,GOAL_RIGHT)
+        self._add_goals(cast,666, 100,GOAL_WIDTH,GOAL_HEIGHT,GOAL_IMAGES,1)
+        self._add_goals(cast,-625, 100,GOALR_WIDTH,GOALR_HEIGHT,GOAL_RIGHT,2)
         cast.clear_actors(TEAM_GROUP)
         self._add_team(cast,80,80)
         self._add_team(cast,80,250)
@@ -128,8 +128,8 @@ class SceneManager:
     def _prepare_next_level(self, cast, script):
         self._add_ball(cast)
         cast.clear_actors(GOAL_GROUP)
-        self._add_goals(cast,666, 100,GOAL_WIDTH,GOAL_HEIGHT,GOAL_IMAGES)
-        self._add_goals(cast,-625, 100,GOALR_WIDTH,GOALR_HEIGHT,GOAL_RIGHT)
+        self._add_goals(cast,666, 100,GOAL_WIDTH,GOAL_HEIGHT,GOAL_IMAGES,1)
+        self._add_goals(cast,-625, 100,GOALR_WIDTH,GOALR_HEIGHT,GOAL_RIGHT,2)
         cast.clear_actors(TEAM_GROUP)
         self._add_team(cast,80,80)
         self._add_team(cast,80,250)
@@ -260,7 +260,7 @@ class SceneManager:
         ball = Ball(body, image, True)
         cast.add_actor(BALL_GROUP, ball)
 
-    def _add_goals(self, cast, grx, gry, goalwidth, goalheight, goalimage):
+    def _add_goals(self, cast, grx, gry, goalwidth, goalheight, goalimage,player):
         x = CENTER_X - grx
         y = CENTER_Y - gry     
         position = Point(x, y)
@@ -268,7 +268,7 @@ class SceneManager:
         velocity = Point(0, 0)
         body = Body(position, size, velocity)
         images = Image(goalimage)
-        goal = Goal(body, images, 1,True)
+        goal = Goal(body, images, player,True)
         cast.add_actor(GOAL_GROUP, goal)
 
     def _add_dialog(self, cast, message):
