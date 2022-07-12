@@ -117,10 +117,10 @@ TEAM_TWO_IMAGES = [f"taca-taca/assets/images/{n:03}.png" for n in range(103, 106
 
 # BRICK
 GOAL_GROUP = "goals"
-BRICK_IMAGES = "taca-taca/assets/images/goalLeft.png"
+GOAL_IMAGES = "taca-taca/assets/images/goalLeft.png"
 GOAL_RIGHT = "taca-taca/assets/images/goalright.png"
-BRICK_WIDTH = 50
-BRICK_HEIGHT = 300
+GOAL_WIDTH = 50
+GOAL_HEIGHT = 300
 GOALR_WIDTH = 80
 GOALR_HEIGHT = 300  
 BRICK_DELAY = 0.5
