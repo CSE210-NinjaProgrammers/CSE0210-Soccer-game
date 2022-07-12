@@ -88,10 +88,33 @@ class SceneManager:
         self._add_score_p1(cast)
         self._add_score_p2(cast)
         self._add_ball(cast)
-        self._add_goals(cast)
-        self._add_goal_right(cast)
-        self._add_team(cast)
-        self._add_team_two(cast)
+        cast.clear_actors(GOAL_GROUP)
+        self._add_goals(cast,666, 100,GOAL_WIDTH,GOAL_HEIGHT,GOAL_IMAGES)
+        self._add_goals(cast,-625, 100,GOALR_WIDTH,GOALR_HEIGHT,GOAL_RIGHT)
+        cast.clear_actors(TEAM_GROUP)
+        self._add_team(cast,80,80)
+        self._add_team(cast,80,250)
+        self._add_team(cast,80,-80)
+        self._add_team(cast,80,-250)
+        self._add_team(cast,300,80)
+        self._add_team(cast,300,250)
+        self._add_team(cast,300,-80)
+        self._add_team(cast,300,-250)
+        self._add_team(cast,500,0)
+        self._add_team(cast,500,160)
+        self._add_team(cast,500,-160)
+        cast.clear_actors(TEAM_TWO_GROUP)
+        self._add_team_two(cast,80,80)
+        self._add_team_two(cast,80,250)
+        self._add_team_two(cast,80,-80)
+        self._add_team_two(cast,80,-250)
+        self._add_team_two(cast,300,80)
+        self._add_team_two(cast,300,250)
+        self._add_team_two(cast,300,-80)
+        self._add_team_two(cast,300,-250)
+        self._add_team_two(cast,500,0)
+        self._add_team_two(cast,500,160)
+        self._add_team_two(cast,500,-160)
         self._add_dialog(cast, ENTER_TO_START)
 
         self._add_initialize_script(script)
@@ -104,10 +127,33 @@ class SceneManager:
         
     def _prepare_next_level(self, cast, script):
         self._add_ball(cast)
-        self._add_goals(cast)
-        self._add_goal_right(cast)
-        self._add_team(cast)
-        self._add_team_two(cast)
+        cast.clear_actors(GOAL_GROUP)
+        self._add_goals(cast,666, 100,GOAL_WIDTH,GOAL_HEIGHT,GOAL_IMAGES)
+        self._add_goals(cast,-625, 100,GOALR_WIDTH,GOALR_HEIGHT,GOAL_RIGHT)
+        cast.clear_actors(TEAM_GROUP)
+        self._add_team(cast,80,80)
+        self._add_team(cast,80,250)
+        self._add_team(cast,80,-80)
+        self._add_team(cast,80,-250)
+        self._add_team(cast,300,80)
+        self._add_team(cast,300,250)
+        self._add_team(cast,300,-80)
+        self._add_team(cast,300,-250)
+        self._add_team(cast,500,0)
+        self._add_team(cast,500,160)
+        self._add_team(cast,500,-160)
+        cast.clear_actors(TEAM_TWO_GROUP)
+        self._add_team_two(cast,80,80)
+        self._add_team_two(cast,80,250)
+        self._add_team_two(cast,80,-80)
+        self._add_team_two(cast,80,-250)
+        self._add_team_two(cast,300,80)
+        self._add_team_two(cast,300,250)
+        self._add_team_two(cast,300,-80)
+        self._add_team_two(cast,300,-250)
+        self._add_team_two(cast,500,0)
+        self._add_team_two(cast,500,160)
+        self._add_team_two(cast,500,-160)
         self._add_dialog(cast, PREP_TO_LAUNCH)
 
         script.clear_actions(INPUT)
@@ -117,8 +163,30 @@ class SceneManager:
         
     def _prepare_try_again(self, cast, script):
         self._add_ball(cast)
-        self._add_team(cast)
-        self._add_team_two(cast)
+        cast.clear_actors(TEAM_GROUP)
+        self._add_team(cast,80,80)
+        self._add_team(cast,80,250)
+        self._add_team(cast,80,-80)
+        self._add_team(cast,80,-250)
+        self._add_team(cast,300,80)
+        self._add_team(cast,300,250)
+        self._add_team(cast,300,-80)
+        self._add_team(cast,300,-250)
+        self._add_team(cast,500,0)
+        self._add_team(cast,500,160)
+        self._add_team(cast,500,-160)
+        cast.clear_actors(TEAM_TWO_GROUP)
+        self._add_team_two(cast,80,80)
+        self._add_team_two(cast,80,250)
+        self._add_team_two(cast,80,-80)
+        self._add_team_two(cast,80,-250)
+        self._add_team_two(cast,300,80)
+        self._add_team_two(cast,300,250)
+        self._add_team_two(cast,300,-80)
+        self._add_team_two(cast,300,-250)
+        self._add_team_two(cast,500,0)
+        self._add_team_two(cast,500,160)
+        self._add_team_two(cast,500,-160)
         self._add_dialog(cast, PREP_TO_LAUNCH)
 
         script.clear_actions(INPUT)
@@ -138,8 +206,30 @@ class SceneManager:
     def _prepare_game_over(self, cast, script):
         stats = cast.get_first_actor(STATS_GROUP)
         self._add_ball(cast)
-        self._add_team(cast)
-        self._add_team_two(cast)
+        cast.clear_actors(TEAM_GROUP)
+        self._add_team(cast,80,80)
+        self._add_team(cast,80,250)
+        self._add_team(cast,80,-80)
+        self._add_team(cast,80,-250)
+        self._add_team(cast,300,80)
+        self._add_team(cast,300,250)
+        self._add_team(cast,300,-80)
+        self._add_team(cast,300,-250)
+        self._add_team(cast,500,0)
+        self._add_team(cast,500,160)
+        self._add_team(cast,500,-160)
+        cast.clear_actors(TEAM_TWO_GROUP)
+        self._add_team_two(cast,80,80)
+        self._add_team_two(cast,80,250)
+        self._add_team_two(cast,80,-80)
+        self._add_team_two(cast,80,-250)
+        self._add_team_two(cast,300,80)
+        self._add_team_two(cast,300,250)
+        self._add_team_two(cast,300,-80)
+        self._add_team_two(cast,300,-250)
+        self._add_team_two(cast,500,0)
+        self._add_team_two(cast,500,160)
+        self._add_team_two(cast,500,-160)
         if stats.get_score_p1() == 5:
             self._add_dialog(cast, PLAYER_TWO_WIN)
         if stats.get_score_p2() == 5:
@@ -170,27 +260,15 @@ class SceneManager:
         ball = Ball(body, image, True)
         cast.add_actor(BALL_GROUP, ball)
 
-    def _add_goals(self, cast):
-        cast.clear_actors(GOAL_GROUP)
-        x = CENTER_X - 666
-        y = CENTER_Y - 100     
+    def _add_goals(self, cast, grx, gry, goalwidth, goalheight, goalimage):
+        x = CENTER_X - grx
+        y = CENTER_Y - gry     
         position = Point(x, y)
-        size = Point(BRICK_WIDTH, BRICK_HEIGHT)
+        size = Point(goalwidth, goalheight)
         velocity = Point(0, 0)
         body = Body(position, size, velocity)
-        images = Image(BRICK_IMAGES)
+        images = Image(goalimage)
         goal = Goal(body, images, 1,True)
-        cast.add_actor(GOAL_GROUP, goal)
-    
-    def _add_goal_right(self, cast):
-        x = CENTER_X + 625
-        y = CENTER_Y - 100       
-        position = Point(x, y)
-        size = Point(GOALR_WIDTH, GOALR_HEIGHT)
-        velocity = Point(0, 0)
-        body = Body(position, size, velocity)
-        images = Image(GOAL_RIGHT)
-        goal = Goal(body, images, 2, True)
         cast.add_actor(GOAL_GROUP, goal)
 
     def _add_dialog(self, cast, message):
@@ -219,20 +297,9 @@ class SceneManager:
         stats = Stats()
         cast.add_actor(STATS_GROUP, stats)
 
-    def _add_team(self, cast):
-        cast.clear_actors(TEAM_GROUP)
-        x = CENTER_X - 40
-        y = CENTER_Y    
-        position = Point(x, y)
-        size = Point(TEAM_WIDTH, TEAM_HEIGHT)
-        velocity = Point(0, 0)
-        body = Body(position, size, velocity)
-        animation = Animation(TEAM_IMAGES, TEAM_RATE)
-        team = Team(body, animation)
-        cast.add_actor(TEAM_GROUP, team)
-
-        x = CENTER_X - 200
-        y = SCREEN_HEIGHT - TEAM_HEIGHT
+    def _add_team(self, cast, positionx, positiony):
+        x = CENTER_X - positionx
+        y = CENTER_Y - positiony   
         position = Point(x, y)
         size = Point(TEAM_WIDTH, TEAM_HEIGHT)
         velocity = Point(0, 0)
@@ -241,20 +308,9 @@ class SceneManager:
         team = Team(body, animation)
         cast.add_actor(TEAM_GROUP, team)
     
-    def _add_team_two(self, cast):
-        cast.clear_actors(TEAM_TWO_GROUP)
-        x = CENTER_X + 40
-        y = CENTER_Y    
-        position = Point(x, y)
-        size = Point(TEAM_WIDTH, TEAM_HEIGHT)
-        velocity = Point(0, 0)
-        body = Body(position, size, velocity)
-        animation = Animation(TEAM_TWO_IMAGES, TEAM_RATE)
-        team2 = Team(body, animation)
-        cast.add_actor(TEAM_TWO_GROUP, team2)
-
-        x = CENTER_X + 200
-        y = SCREEN_HEIGHT - TEAM_HEIGHT
+    def _add_team_two(self, cast, positionx, positiony):
+        x = CENTER_X + positionx
+        y = CENTER_Y + positiony   
         position = Point(x, y)
         size = Point(TEAM_WIDTH, TEAM_HEIGHT)
         velocity = Point(0, 0)
