@@ -3,6 +3,7 @@ from game.scripting.action import Action
 
 
 class DrawGoalAction(Action):
+    """The action that display the Goal object of the game"""
 
     def __init__(self, video_service):
         self._video_service = video_service

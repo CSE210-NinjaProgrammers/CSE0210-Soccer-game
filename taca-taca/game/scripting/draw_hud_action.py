@@ -3,6 +3,7 @@ from game.scripting.action import Action
 
 
 class DrawHudAction(Action):
+    """An action that sets the formats of the HUD of the game and how it displays"""
 
     def __init__(self, video_service):
         self._video_service = video_service

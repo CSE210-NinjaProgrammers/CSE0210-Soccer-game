@@ -3,6 +3,7 @@ from game.scripting.action import Action
 
 
 class DrawDialogAction(Action):
+    """This is an action that applies to the current text that appears in this game display"""
 
     def __init__(self, video_service):
         self._video_service = video_service

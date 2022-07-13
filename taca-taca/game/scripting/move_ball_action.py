@@ -3,6 +3,7 @@ from game.scripting.action import Action
 
 
 class MoveBallAction(Action):
+    """An action that controlls the movement of the ball display"""
 
     def __init__(self):
         pass

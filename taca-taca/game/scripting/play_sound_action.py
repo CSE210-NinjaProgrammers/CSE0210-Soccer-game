@@ -4,6 +4,7 @@ from game.casting.sound import Sound
 
 
 class PlaySoundAction(Action):
+    """An action that controlls the audio of the game as it runs"""
 
     def __init__(self, audio_service, filename):
         self._audio_service = audio_service

@@ -3,6 +3,8 @@ from game.scripting.action import Action
 
 
 class DrawTeamAction(Action):
+    """An action that sets the teams displays with it movement and positions including how the players appears in the game
+    and settings"""
 
     def __init__(self, video_service):
         self._video_service = video_service

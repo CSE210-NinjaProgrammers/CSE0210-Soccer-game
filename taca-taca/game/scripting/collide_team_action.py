@@ -4,6 +4,7 @@ from game.scripting.action import Action
 
 
 class CollideTeamAction(Action):
+    """An action that is applied for both team or players of the game"""
 
     def __init__(self, physics_service, audio_service):
         self._physics_service = physics_service
