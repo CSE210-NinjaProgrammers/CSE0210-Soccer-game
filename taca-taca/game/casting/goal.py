@@ -5,7 +5,7 @@ class Goal(Actor):
     """A solid, rectangular object that can be broken."""
 
     def __init__(self, body, image, player, debug = False):
-        """Constructs a new Brick.
+        """Constructs a new Goal.
         
         Args:
             body: A new instance of Body.
@@ -35,7 +35,7 @@ class Goal(Actor):
         return self._image
 
     def get_body(self):
-        """Gets the brick's body.
+        """Gets the Goal's body.
         
         Returns:
             An instance of Body.
@@ -43,9 +43,9 @@ class Goal(Actor):
         return self._body
 
     def get_points(self):
-        """Gets the brick's points.
+        """Gets the Goal's points.
         
         Returns:
-            A number representing the brick's points.
+            A number representing the Goal's points.
         """
         return self._points

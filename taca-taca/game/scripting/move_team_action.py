@@ -5,6 +5,7 @@ from game.scripting.action import Action
 
 
 class MoveTeamAction(Action):
+    """The actiom which applies to the movement of both teams(red & black)."""
 
     def __init__(self):
         pass  

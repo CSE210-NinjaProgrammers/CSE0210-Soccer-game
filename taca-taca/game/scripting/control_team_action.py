@@ -3,6 +3,7 @@ from game.scripting.action import Action
 
 
 class ControlTeamAction(Action):
+    """An action that controls the movement of both players or actors in the game"""
 
     def __init__(self, keyboard_service):
         self._keyboard_service = keyboard_service

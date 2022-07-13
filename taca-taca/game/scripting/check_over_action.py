@@ -5,6 +5,7 @@ from game.scripting.action import Action
 
 
 class CheckOverAction(Action):
+    """An action that applies to an actor that scores in the game and points are applied """
 
     def __init__(self, audio_service):
         self._audio_service = audio_service  
