@@ -34,15 +34,3 @@ class CollideBordersAction(Action):
         elif y >= (FIELD_BOTTOM - BALL_WIDTH):
             ball.bounce_y()
             self._audio_service.play_sound(bounce_sound)
-
-        teams = cast.get_actors(TEAM_GROUP)
-        for team in teams:
-            team_body = team.get_body()
-            team_position = team_body.get_position()
-               
-            if team_position.get_y() < FIELD_TOP:
-                team.swing_down()
-                print(team_position.get_y())
-
-            elif team_position.get_y() >= (FIELD_BOTTOM - BALL_WIDTH):
-                team.swing_up()
