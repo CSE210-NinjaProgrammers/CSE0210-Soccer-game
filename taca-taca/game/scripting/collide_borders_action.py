@@ -4,6 +4,7 @@ from game.scripting.action import Action
 
 
 class CollideBordersAction(Action):
+    """An action that deals with the borders of the objects in the consoles"""
 
     def __init__(self, physics_service, audio_service):
         self._physics_service = physics_service

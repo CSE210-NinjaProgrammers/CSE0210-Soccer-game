@@ -3,6 +3,7 @@ from game.scripting.action import Action
 
 
 class LoadAssetsAction(Action):
+    """This action loads everything in the assets files of this game that includes sounds, images, and fonts"""
 
     def __init__(self, audio_service, video_service):
         self._audio_service = audio_service

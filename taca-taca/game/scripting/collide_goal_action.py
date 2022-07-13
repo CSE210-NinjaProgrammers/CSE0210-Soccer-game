@@ -4,6 +4,7 @@ from game.scripting.action import Action
 
 
 class CollideGoalAction(Action):
+    """An action that is applies to the left and right goal post of the game"""
 
     def __init__(self, physics_service, audio_service):
         self._physics_service = physics_service
