@@ -2,6 +2,7 @@ from game.scripting.action import Action
 
 
 class UnloadAssetsAction(Action):
+    "An action that unloads all assets that executes in this game"
 
     def __init__(self, audio_service, video_service):
         self._audio_service = audio_service

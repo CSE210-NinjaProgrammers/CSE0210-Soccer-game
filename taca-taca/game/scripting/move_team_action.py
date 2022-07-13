@@ -5,6 +5,7 @@ from game.scripting.action import Action
 
 
 class MoveTeamAction(Action):
+    """The actiom which applies to the movement of both teams(red & black)."""
 
     def __init__(self):
         pass  
@@ -25,10 +26,16 @@ class MoveTeamAction(Action):
                 position = Point(0, position.get_y())
             elif x > (SCREEN_WIDTH - TEAM_WIDTH):
                 position = Point(SCREEN_WIDTH - TEAM_WIDTH, position.get_y())
-
-            
-            body.set_position(position)
         
+            if any(t.get_body().get_position().get_y() < FIELD_TOP for t in teams):
+                body.set_position(Point(position.get_x(), position.get_y() + 1))
+
+            elif any(t.get_body().get_position().get_y() >= FIELD_BOTTOM for t in teams):
+                body.set_position(Point(position.get_x(), position.get_y() - 1))
+
+            else:
+                body.set_position(position)
+
 
         team2 = cast.get_actors(TEAM_TWO_GROUP)
 
@@ -45,5 +52,13 @@ class MoveTeamAction(Action):
             elif x > (SCREEN_WIDTH - TEAM_WIDTH):
                 position = Point(SCREEN_WIDTH - TEAM_WIDTH, position.get_y())
             
-            body.set_position(position)
+            if any(t.get_body().get_position().get_y() < FIELD_TOP for t in team2):
+                body.set_position(Point(position.get_x(), position.get_y() + 1))
+
+            elif any(t.get_body().get_position().get_y() >= FIELD_BOTTOM for t in team2):
+                body.set_position(Point(position.get_x(), position.get_y() - 1))
+
+            else:
+                body.set_position(position)
+            
         

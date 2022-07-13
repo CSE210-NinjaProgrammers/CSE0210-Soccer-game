@@ -3,6 +3,7 @@ from game.scripting.action import Action
 
 
 class DrawBallAction(Action):
+    """An action that starts the ball action from the ball class"""
 
     def __init__(self, video_service):
         self._video_service = video_service
